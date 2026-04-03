@@ -1,30 +1,23 @@
-# DataVista 🚀
+# DataVista Python Backend
 
-DataVista is a full-stack data visualization and analysis platform.
+This folder contains the new FastAPI backend for DataVista. The React frontend can continue using the existing `/api/...` route shape while the backend is rebuilt in Python phase by phase.
 
-## Features
-- User Authentication (JWT)
-- CSV Dataset Upload
-- Dataset Records View
-- Data Cleaning
-- Data Insights
-- Statistics & Analytics
+## Phase 1 Scope
 
-## Tech Stack
-### Frontend
-- React + Vite
+- Set up a production-style FastAPI entrypoint
+- Add MongoDB connection management
+- Add environment-based configuration
+- Prepare the folder layout for upcoming auth, dataset, cleaning, and AI modules
 
-### Backend
-- FastAPI (Python)
-- MongoDB
-- Pandas
+## Run Locally
 
-## Setup
+1. Create and activate a virtual environment
+2. Install dependencies from `requirements.txt`
+3. Copy `.env` values and update MongoDB credentials
+4. Start the API with Uvicorn on port `5000`
 
-### Backend
-```bash
-cd backend-python
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 5000
+## Available Endpoints
+
+- `GET /`
+- `GET /api/health`
+- `GET /docs`
